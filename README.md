@@ -1,2 +1,2 @@
-# dotnetcore-k8
-Dotnet core image enriched with docker, kubectl and nodejs
+# dotnetcore-ci
+Dotnet core image enriched with docker nodejs
