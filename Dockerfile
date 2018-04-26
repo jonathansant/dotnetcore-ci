@@ -22,14 +22,8 @@ RUN curl -SL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-lin
 	&& rm nodejs.tar.gz \
 	&& ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
-RUN npm i -g phantomjs-prebuilt node-sass --unsafe-perm
+RUN npm i -g phantomjs-prebuilt node-sass ts-node --unsafe-perm
 RUN npm rebuild node-sass
-
-#setup klubectl
-RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
-&& curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/linux/amd64/kubectl \
-&& chmod +x ./kubectl \
-&& mv ./kubectl /usr/local/bin/kubectl
 
 RUN echo node version: $(node -v)
 RUN echo npm version: $(npm -v)
