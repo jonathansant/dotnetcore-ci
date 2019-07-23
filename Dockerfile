@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk as build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 as build-env
 
 #setup node
 ENV NODE_VERSION 10.10.0
